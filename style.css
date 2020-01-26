@@ -5,6 +5,9 @@ html {
   font-family: 'Montserrat', sans-serif;
   background-image: url(header.jpg); no-repeat center center fixed;
   background-size: cover;
+	background-repeat:no-repeat;
+ background-position: center;
+ background-attachment:fixed;
 }
 h1{
 	font-size: 3rem;
