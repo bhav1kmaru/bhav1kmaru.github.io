@@ -80,8 +80,8 @@ const About = () => {
           src={Bhavik}
           alt="bhavik"
           style={{
-            height: isMd ? "250px" : "300px",
-            width: isMd ? "250px" : "300px",
+            height: isMd ? "200px" : "300px",
+            width: isMd ? "200px" : "300px",
           }}
         />
       </Grid>
