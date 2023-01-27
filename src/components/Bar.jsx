@@ -136,7 +136,7 @@ export default function Bar() {
               css={{
                 minWidth: "100%",
               }}
-              href={`https://bhav1kmaru.github.io/#${item.toLowerCase()}`}
+              href='#'
               onClick={() => setCurrentPage(item.toLowerCase())}
             >
               {item}
