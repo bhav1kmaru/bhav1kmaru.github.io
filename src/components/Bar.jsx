@@ -130,6 +130,7 @@ export default function Bar() {
             // }}
             // isActive={index === 2}
             isActive={currentPage == item.toLowerCase()}
+            onClick={()=>{window.location.href=`/#${item.toLowerCase()}`}}
           >
             {/* <Link
               color="inherit"
