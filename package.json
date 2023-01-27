@@ -1,0 +1,29 @@
+{
+  "name": "nextportfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.4.9",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@next/font": "13.1.4",
+    "@nextui-org/react": "^1.0.0-beta.12",
+    "@splidejs/react-splide": "^0.7.12",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.4",
+    "framer-motion": "^8.5.2",
+    "next": "13.1.4",
+    "next-themes": "^0.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-github-calendar": "^3.4.0",
+    "react-icons": "^4.7.1",
+    "typewriter-effect": "^2.19.0"
+  }
+}
