@@ -61,7 +61,7 @@ export default function Bar() {
           size="md"
           src={logo}
         /> */}
-        
+
         {/* <Typewriter
           options={{
             strings: ["Bhavik Maru","Bhavik Maru"],
@@ -136,7 +136,7 @@ export default function Bar() {
               css={{
                 minWidth: "100%",
               }}
-              href={`#${item.toLowerCase()}`}
+              href={`https://bhav1kmaru.github.io/#${item.toLowerCase()}`}
               onClick={() => setCurrentPage(item.toLowerCase())}
             >
               {item}
