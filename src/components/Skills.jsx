@@ -1,10 +1,12 @@
 import { Card, Text, useTheme } from '@nextui-org/react';
 import Image from 'next/image';
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import next from "./next.svg";
 import nextDark from "./nextDark.svg";
 import {motion} from 'framer-motion'
 import { useMediaQuery } from './useMediaQuery';
+import { useInView } from 'react-intersection-observer';
+import { PageContext } from '../contexts/PageContext';
 
 const Skills = () => {
     const {isDark}=useTheme()
@@ -69,6 +71,14 @@ const Skills = () => {
         icon: "https://img.icons8.com/color/70/null/mongodb.png",
       },
     ];
+    const {ref,inView}=useInView({threshold:0.5})
+    const {setCurrentPage}=useContext(PageContext)
+
+    useEffect(()=>{
+      if(inView){
+        setCurrentPage("skills")
+      }
+    },[inView])
   return (
     <div
       style={{
@@ -78,6 +88,7 @@ const Skills = () => {
         marginTop: "100px",
       }}
       id='skills'
+      ref={ref}
     >
       <h1>Skills,Languages & Tools</h1>
       <h2 style={{ marginTop: "50px" }}>Front-End</h2>

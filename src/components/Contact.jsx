@@ -1,11 +1,41 @@
-import { Text } from '@nextui-org/react';
-import React from 'react'
+import { Button, Input, Loading, Spacer, Text, Textarea } from '@nextui-org/react';
+import React, { useContext, useEffect, useState } from 'react'
 import {motion} from 'framer-motion'
 import Link from 'next/link';
 import { useMediaQuery } from './useMediaQuery';
+import { useInView } from 'react-intersection-observer';
+import { PageContext } from '../contexts/PageContext';
 
 const Contact = () => {
     const isMd = useMediaQuery(960);
+    const {ref,inView}=useInView({threshold:0.1})
+    const {setCurrentPage}=useContext(PageContext)
+    const [name,setName]=useState("")
+    const [email,setEmail]=useState("")
+    const [message,setMessage]=useState("")
+    const [loading,setLoading]=useState(false)
+    useEffect(()=>{
+      if(inView){
+        setCurrentPage("contact")
+      }
+    },[inView])
+    const sendMessage=async(name,email,message)=>{
+      setLoading(true)
+      const send={name,email,message}
+      let response = await fetch(
+        `https://portfolioqueries.vercel.app/messages`,{
+          method:"POST",
+          body:JSON.stringify(send),
+          headers:{
+            "Content-Type":"application/json"
+          }
+        }
+      );
+      setLoading(false);
+      let data=await response.json()
+      console.log(data)
+      
+    }
   return (
     <div
       id="contact"
@@ -13,17 +43,21 @@ const Contact = () => {
         width: "80%",
         margin: "auto",
         textAlign: "center",
-        marginTop: "200px",
+        marginTop: "350px",
+        border: isMd ? "0px" : "1px solid",
+        marginBottom: "100px",
+        padding: isMd ? "0px" : "20px",
       }}
+      ref={ref}
     >
       <h1>Interested to work together? {"Let's"} talk</h1>
       <div
         style={{
-          display:isMd?"grid":"flex",
+          display: isMd ? "grid" : "flex",
           textAlign: "center",
           justifyContent: "center",
           gap: "30px",
-          gridTemplateColumns:"1fr 1fr"
+          gridTemplateColumns: "1fr 1fr",
         }}
       >
         <Link href="https://www.linkedin.com/in/bhavik-maru-9b52b31b9/">
@@ -72,6 +106,47 @@ const Contact = () => {
           <img src="https://img.icons8.com/color/70/null/ringer-volume.png" />
           <Text>+91 9867513869</Text>
         </motion.div>
+      </div>
+      <div style={{ marginTop: "70px", textAlign: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+          <Input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            clearable
+            labelPlaceholder="Name"
+          />
+          <Input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            clearable
+            labelPlaceholder="Email"
+          />
+        </div>
+        <div style={{ marginTop: "30px" }}>
+          <Textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            size="xl"
+            labelPlaceholder="Enter your message"
+          />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "20px",
+          }}
+        >
+          <Button
+            onClick={() => sendMessage(name, email, message)}
+            ghost
+            rounded
+            color="gradient"
+          >
+            {loading ? <Loading /> : "Send Message"}
+          </Button>
+        </div>
       </div>
     </div>
   );

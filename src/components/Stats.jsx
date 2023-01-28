@@ -1,20 +1,31 @@
 import { useTheme } from '@nextui-org/react';
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import GitHubCalendar from 'react-github-calendar';
+import { useInView } from 'react-intersection-observer';
+import { PageContext } from '../contexts/PageContext';
 import { useMediaQuery } from './useMediaQuery';
 
 const Stats = () => {
     const {isDark}=useTheme()
     const statTheme=isDark?'dark':"light"
     const isMd = useMediaQuery(960);
+    const {ref,inView}=useInView({threshold:0.3})
+    const {setCurrentPage}=useContext(PageContext)
+    useEffect(()=>{
+      if(inView){
+        setCurrentPage("stats")
+      }
+    },[inView])
   return (
-    <div id='stats'
+    <div
+      id="stats"
       style={{
         textAlign: "center",
         width: "80%",
         margin: "auto",
         marginTop: "100px",
       }}
+      ref={ref}
     >
       <h1>Stats</h1>
       <h2 style={{ marginTop: "50px" }}>My GitHub Stats</h2>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import {Box, Button, Container, Grid, Row, Text} from '@nextui-org/react'
 import Bhavik from './bhavik.png'
 import Image from 'next/image'
@@ -7,9 +7,18 @@ import Typewriter from "typewriter-effect";
 import { useMediaQuery } from './useMediaQuery'
 import Link from 'next/link'
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer'
+import { PageContext } from '../contexts/PageContext'
 
 const About = () => {
   const isMd=useMediaQuery(960)
+  const {ref,inView}=useInView()
+  const {setCurrentPage}=useContext(PageContext)
+  useEffect(()=>{
+    if(inView){
+      setCurrentPage("about")
+    }
+  },[inView])
   return (
     <Grid.Container
       justify="center"
@@ -19,6 +28,7 @@ const About = () => {
       // alignItems="center"
       id="about"
       gap={2}
+      ref={ref}
     >
       <Grid css={{ width: isMd ? "100%" : "50%" }}>
         <Text

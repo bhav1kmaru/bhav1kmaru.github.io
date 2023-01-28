@@ -10,12 +10,13 @@ import {
 import { useTheme as useNextTheme } from "next-themes";
 import { useTheme } from "@nextui-org/react";
 import { MoonIcon, SunIcon } from "./NavbarIcons";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import styles from './Bar.module.css'
 import Typewriter from "typewriter-effect";
 import logo from './myMemoji.png'
 import Image from "next/image";
+import { PageContext } from "../contexts/PageContext";
 
 
 // import { Layout } from "./Layout.js";
@@ -40,7 +41,7 @@ const ThemeToggler = () => {
 export default function Bar() {
   const collapseItems = ["About", "Projects", "Skills", "Stats", "Contact"];
   const { isDark, type } = useTheme();
-  const [currentPage,setCurrentPage]=useState("about")
+  const {currentPage}=useContext(PageContext)
   const router=useRouter()
   
 
@@ -88,7 +89,7 @@ export default function Bar() {
             <Navbar.Link
               isActive={currentPage === el.toLowerCase()}
               href={`#${el.toLowerCase()}`}
-              onClick={() => setCurrentPage(el.toLowerCase())}
+              // onClick={() => setCurrentPage(el.toLowerCase())}
             >
               {el}
             </Navbar.Link>
