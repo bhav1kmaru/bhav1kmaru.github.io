@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useMediaQuery } from './useMediaQuery';
 import { useInView } from 'react-intersection-observer';
 import { PageContext } from '../contexts/PageContext';
+import ContactForm from './ContactForm';
 
 const Contact = () => {
     const isMd = useMediaQuery(960);
@@ -107,47 +108,7 @@ const Contact = () => {
           <Text>+91 9867513869</Text>
         </motion.div>
       </div>
-      <div style={{ marginTop: "70px", textAlign: "center" }}>
-        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
-          <Input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            clearable
-            labelPlaceholder="Name"
-          />
-          <Input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="email"
-            clearable
-            labelPlaceholder="Email"
-          />
-        </div>
-        <div style={{ marginTop: "30px" }}>
-          <Textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            size="xl"
-            labelPlaceholder="Enter your message"
-          />
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "20px",
-          }}
-        >
-          <Button
-            onClick={() => sendMessage(name, email, message)}
-            ghost
-            rounded
-            color="gradient"
-          >
-            {loading ? <Loading /> : "Send Message"}
-          </Button>
-        </div>
-      </div>
+      <ContactForm />
     </div>
   );
 }

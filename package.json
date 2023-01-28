@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^2.4.9",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@formspree/react": "^2.4.1",
     "@next/font": "13.1.4",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@splidejs/react-splide": "^0.7.12",
