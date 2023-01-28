@@ -1,4 +1,4 @@
-import { Button, Text, useTheme } from "@nextui-org/react";
+import { Button, Text, useTheme,css } from "@nextui-org/react";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";

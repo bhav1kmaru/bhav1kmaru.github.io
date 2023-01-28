@@ -7,10 +7,13 @@ import ApnaDashboard from './ApnaDashboard/apnaDashboard';
 import TrackingTime from './TrackingTime/TrackingTime';
 import { useInView } from 'react-intersection-observer';
 import { PageContext } from '../contexts/PageContext';
+import { Container } from '@nextui-org/react';
+import { useTheme } from '@nextui-org/react';
 
 const Projects = () => {
    const { ref, inView } = useInView({threshold:0.1})
    const { setCurrentPage } = useContext(PageContext);
+   const {theme}=useTheme()
    useEffect(()=>{
     if(inView){
       setCurrentPage("projects")
@@ -27,12 +30,12 @@ const Projects = () => {
       }}
     >
       <h1>Projects</h1>
-      <div ref={ref}>
+      <div ref={ref} style={{ display: "grid", gap: "50px" }}>
         <Tripster />
         <TripsterDashboard />
         <ApnaMall />
         <ApnaDashboard />
-        <TrackingTime />
+          <TrackingTime />
       </div>
     </div>
   );
