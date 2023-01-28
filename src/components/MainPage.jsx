@@ -33,7 +33,7 @@ const MainPage = () => {
           gap: "10px",
         }}
       >
-        <Text>Built by Bhavik {"with "} </Text>
+        <Text>❤️ Built by Bhavik {"with "} </Text>
         <div>
           <Image height="10" src={isDark ? next : nextDark} />
         </div>
