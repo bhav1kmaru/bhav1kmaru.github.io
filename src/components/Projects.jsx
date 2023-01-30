@@ -9,6 +9,7 @@ import { useInView } from 'react-intersection-observer';
 import { PageContext } from '../contexts/PageContext';
 import { Container } from '@nextui-org/react';
 import { useTheme } from '@nextui-org/react';
+import "@splidejs/splide/css/skyblue";
 
 const Projects = () => {
    const { ref, inView } = useInView({threshold:0.1})
