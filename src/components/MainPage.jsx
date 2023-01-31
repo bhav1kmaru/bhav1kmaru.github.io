@@ -33,7 +33,7 @@ const MainPage = () => {
           gap: "10px",
         }}
       >
-        <Text>❤️ Built by Bhavik {"with "} </Text>
+        <Text><img style={{height:"20px"}} src='https://em-content.zobj.net/source/microsoft-teams/337/heart-on-fire_2764-fe0f-200d-1f525.png' /> Built by Bhavik {"with "} </Text>
         <div>
           <Image height="10" src={isDark ? next : nextDark} />
         </div>

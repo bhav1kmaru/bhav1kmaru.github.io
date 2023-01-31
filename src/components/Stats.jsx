@@ -18,6 +18,7 @@ const Stats = () => {
         setCurrentPage("stats")
       }
     },[inView])
+  
   return (
     <motion.div
       id="stats"
@@ -65,19 +66,21 @@ const Stats = () => {
         transition={{ duration: 1 }}
       >
         <h2 style={{ marginTop: "50px" }}>GitHub Calendar</h2>
-        <div>
+        <div className='calendar'>
           <GitHubCalendar
             username="bhav1kmaru"
             style={{ margin: "auto" }}
             blockSize={12}
             fontSize={15}
             blockMargin={8}
+            
           >
             {" "}
             <div>
               <ReactTooltip delayShow={20} html />
             </div>
           </GitHubCalendar>
+          
         </div>
       </motion.div>
     </motion.div>

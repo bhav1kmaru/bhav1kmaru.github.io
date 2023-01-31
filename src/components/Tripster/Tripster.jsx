@@ -218,7 +218,11 @@ const Tripster = () => {
             ghost
             color="gradient"
           >
-            Live Demo 🚀
+            Live Demo{" "}
+            <img
+              style={{ height: "20px" }}
+              src="https://em-content.zobj.net/source/microsoft-teams/337/rocket_1f680.png"
+            />
           </Button>
         </div>
       </motion.div>

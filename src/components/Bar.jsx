@@ -12,11 +12,12 @@ import { useTheme } from "@nextui-org/react";
 import { MoonIcon, SunIcon } from "./NavbarIcons";
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import styles from './Bar.module.css'
 import Typewriter from "typewriter-effect";
 import logo from './myMemoji.png'
 import Image from "next/image";
 import { PageContext } from "../contexts/PageContext";
+import { BsDownload } from "react-icons/bs";
+
 
 
 // import { Layout } from "./Layout.js";
@@ -70,7 +71,20 @@ export default function Bar() {
             loop: true,
           }}
         /> */}
-        <Text>Bhavik Maru</Text>
+        <img
+          style={{ height: "30px" }}
+          src="https://em-content.zobj.net/source/microsoft-teams/337/rocket_1f680.png"
+        />
+        <Text
+          css={{
+            cursor: "pointer",
+            "&:hover": {
+              textGradient: "45deg, $blue600 -20%, $pink600 50%",
+            },
+          }}
+        >
+          Bhavik Maru
+        </Text>
       </Navbar.Brand>
       <Navbar.Content
         enableCursorHighlight
@@ -108,7 +122,18 @@ export default function Bar() {
             );
           }}
         >
-          Resume
+          <div
+            style={{
+              display: "flex",
+              gap: "10px",
+              justifyContent: "center",
+              alignContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <BsDownload />
+            Resume
+          </div>
         </Button>
       </Navbar.Content>
       <Navbar.Content
@@ -131,9 +156,10 @@ export default function Bar() {
             // }}
             // isActive={index === 2}
             isActive={currentPage == item.toLowerCase()}
-            onClick={()=>{window.location.href=`/#${item.toLowerCase()}`
-          window.location.reload()
-          }}
+            onClick={() => {
+              window.location.href = `/#${item.toLowerCase()}`;
+              window.location.reload();
+            }}
           >
             {/* <Link
               color="inherit"

@@ -9,6 +9,8 @@ import Link from 'next/link'
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer'
 import { PageContext } from '../contexts/PageContext'
+import { FaBeer } from "react-icons/fa";
+import {BsDownload} from "react-icons/bs"
 
 const About = () => {
   const isMd=useMediaQuery(960)
@@ -42,6 +44,10 @@ const About = () => {
               textGradient: "45deg, $blue600 -20%, $pink600 50%",
             }}
           >
+            <img
+              style={{ height: "50px" }}
+              src="https://em-content.zobj.net/source/microsoft-teams/337/waving-hand_medium-light-skin-tone_1f44b-1f3fc_1f3fc.png"
+            /><br />
             Hey folks, I am
             <Typewriter
               options={{
@@ -82,9 +88,21 @@ const About = () => {
               );
             }}
           >
-            Resume
+            <div
+              style={{
+                display: "flex",
+                gap: "10px",
+                justifyContent: "center",
+                alignContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <BsDownload />
+              Resume
+            </div>
           </Button>
           <Button auto flat as={Link} href="#contact" color="gradient">
+            <img style={{height:"30px"}} src='https://em-content.zobj.net/source/microsoft-teams/337/love-letter_1f48c.png' />
             Contact
           </Button>
         </motion.div>
