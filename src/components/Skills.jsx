@@ -8,6 +8,7 @@ import { useMediaQuery } from './useMediaQuery';
 import { useInView } from 'react-intersection-observer';
 import { PageContext } from '../contexts/PageContext';
 
+
 const Skills = () => {
     const {isDark}=useTheme()
     const isMd = useMediaQuery(960);
@@ -80,110 +81,129 @@ const Skills = () => {
       }
     },[inView])
   return (
-    <div
+    <motion.div
       style={{
         textAlign: "center",
         width: "80%",
         margin: "auto",
         marginTop: "100px",
       }}
-      id='skills'
+      id="skills"
       ref={ref}
+      whileInView={{ opacity: [0, 1], scale: [0.9, 1] }}
+      transition={{ duration: 1 }}
     >
       <h1>Skills,Languages & Tools</h1>
-      <h2 style={{ marginTop: "50px" }}>Front-End</h2>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns:isMd?"1fr 1fr 1fr": "1fr 1fr 1fr 1fr 1fr 1fr",
-        }}
+      <motion.div
+        whileInView={{ opacity: [0, 1], scale: [0.9, 1] }}
+        transition={{ duration: 1 }}
       >
-        {frontEnd.map((el) => (
-          <motion.div
-            key={el.title}
-            whileHover={{
-              scale: 1.1,
-              textShadow: "0px 0px 4px gray",
-            }}
-            style={{ cursor: "pointer" }}
-          >
-            <Image src={el.icon} alt={el.title} width="70" height="70" />
-            <Text>{el.title}</Text>
-          </motion.div>
-        ))}
-      </div>
-      <h2 style={{ marginTop: "50px" }}>Back-End</h2>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-        }}
+        <h2 style={{ marginTop: "50px" }}>Front-End</h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: isMd
+              ? "1fr 1fr 1fr"
+              : "1fr 1fr 1fr 1fr 1fr 1fr",
+          }}
+        >
+          {frontEnd.map((el) => (
+            <motion.div
+              key={el.title}
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 4px gray",
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <Image src={el.icon} alt={el.title} width="70" height="70" />
+              <Text>{el.title}</Text>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+      <motion.div
+        whileInView={{ opacity: [0, 1], scale: [0.9, 1] }}
+        transition={{ duration: 1 }}
       >
-        {backEnd.map((el) => (
-          <motion.div
-            key={el.title}
-            whileHover={{
-              scale: 1.1,
-              textShadow: "0px 0px 4px gray",
-            }}
-            style={{ cursor: "pointer" }}
-          >
-            <Image src={el.icon} alt={el.title} width="70" height="70" />
-            <Text>{el.title}</Text>
-          </motion.div>
-        ))}
-      </div>
-      <h2 style={{ marginTop: "50px" }}>Tools</h2>
-      <div style={{ marginTop: "40px" }} align="center">
-        <img
-          src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"
-          align="center"
-          alt="git"
-        />
-        <img
-          src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7"
-          align="center"
-          alt="git"
-        />
-        <img
-          src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=whit"
-          align="center"
-          alt="git"
-        />
-        <img
-          src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
-          align="center"
-          alt="github"
-        />
-        <img
-          src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"
-          align="center"
-          alt="postman"
-        />
-        <img
-          src="https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white"
-          align="center"
-          alt="npm"
-        />
-        <img
-          src="https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white"
-          align="center"
-          alt="vscode"
-        />
-        <br />
-        <br />
-        <img
-          src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"
-          align="center"
-          alt="slack"
-        />
-        <img
-          src="https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white"
-          align="center"
-          alt="storybook"
-        />
-      </div>
-    </div>
+        <h2 style={{ marginTop: "50px" }}>Back-End</h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+          }}
+        >
+          {backEnd.map((el) => (
+            <motion.div
+              key={el.title}
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 4px gray",
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <Image src={el.icon} alt={el.title} width="70" height="70" />
+              <Text>{el.title}</Text>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+      <motion.div
+        whileInView={{ opacity: [0, 1], scale: [0.9, 1] }}
+        transition={{ duration: 1 }}
+      >
+        <h2 style={{ marginTop: "50px" }}>Tools</h2>
+        <div style={{ marginTop: "40px" }} align="center">
+          <img
+            src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"
+            align="center"
+            alt="git"
+          />
+          <img
+            src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7"
+            align="center"
+            alt="git"
+          />
+          <img
+            src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=whit"
+            align="center"
+            alt="git"
+          />
+          <img
+            src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+            align="center"
+            alt="github"
+          />
+          <img
+            src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"
+            align="center"
+            alt="postman"
+          />
+          <img
+            src="https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white"
+            align="center"
+            alt="npm"
+          />
+          <img
+            src="https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white"
+            align="center"
+            alt="vscode"
+          />
+          <br />
+          <br />
+          <img
+            src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"
+            align="center"
+            alt="slack"
+          />
+          <img
+            src="https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white"
+            align="center"
+            alt="storybook"
+          />
+        </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

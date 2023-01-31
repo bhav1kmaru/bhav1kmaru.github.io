@@ -38,7 +38,9 @@ const Contact = () => {
       
     }
   return (
-    <div
+    <motion.div
+      whileInView={{ opacity: [0, 1], scale: [0.9, 1] }}
+      transition={{ duration: 1 }}
       id="contact"
       style={{
         width: "80%",
@@ -109,7 +111,7 @@ const Contact = () => {
         </motion.div>
       </div>
       <ContactForm />
-    </div>
+    </motion.div>
   );
 }
 

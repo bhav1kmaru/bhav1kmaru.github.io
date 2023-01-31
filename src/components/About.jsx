@@ -22,7 +22,7 @@ const About = () => {
   return (
     <Grid.Container
       justify="center"
-      css={{ marginTop:isMd?"": "150px", width: "70%", margin: "auto", }}
+      css={{ marginTop: isMd ? "" : "150px", width: "70%", margin: "auto" }}
       direction={isMd ? "column" : "row"}
       // alignContent="center"
       // alignItems="center"
@@ -31,29 +31,34 @@ const About = () => {
       ref={ref}
     >
       <Grid css={{ width: isMd ? "100%" : "50%" }}>
-        <Text
-          h2
-          css={{
-            gap: "10px",
-            textGradient: "45deg, $blue600 -20%, $pink600 50%",
-          }}
+        <motion.div
+          whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+          transition={{ duration: 1 }}
         >
-          Hey folks, I am
-          <Typewriter
-            options={{
-              strings: ["Bhavik Maru", "A Full Stack Web Developer"],
-              autoStart: true,
-              loop: true,
+          <Text
+            h2
+            css={{
+              gap: "10px",
+              textGradient: "45deg, $blue600 -20%, $pink600 50%",
             }}
-          />
-        </Text>
-        <Text p>
-          An ambitious Full Stack Developer who is comfortable working with both
-          front-end and back-end technologies. 1200+ hours of coding and
-          hands-on experience in developing various Web-Apps and programs using
-          Vanilla JavaScript and ReactJS. Looking forward to working as an
-          accountable and competent employee in an exciting tech company.
-        </Text>
+          >
+            Hey folks, I am
+            <Typewriter
+              options={{
+                strings: ["Bhavik Maru", "A Full Stack Web Developer"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </Text>
+          <Text p>
+            An ambitious Full Stack Developer who is comfortable working with
+            both front-end and back-end technologies. 1200+ hours of coding and
+            hands-on experience in developing various Web-Apps and programs
+            using Vanilla JavaScript and ReactJS. Looking forward to working as
+            an accountable and competent employee in an exciting tech company.
+          </Text>
+        </motion.div>
         <motion.div
           initial={{ scale: 0 }}
           animate={{ rotate: 360, scale: 1 }}
@@ -65,7 +70,7 @@ const About = () => {
           style={{ display: "flex", gap: "10px", marginTop: "10px" }}
         >
           <Button
-          auto
+            auto
             flat
             as={Link}
             color="secondary"
@@ -86,14 +91,19 @@ const About = () => {
       </Grid>
 
       <Grid>
-        <Image
-          src={Bhavik}
-          alt="bhavik"
-          style={{
-            height: isMd ? "200px" : "300px",
-            width: isMd ? "200px" : "300px",
-          }}
-        />
+        <motion.div
+          whileInView={{ x: [200, 0], opacity: [0, 1] }}
+          transition={{ duration: 1 }}
+        >
+          <Image
+            src={Bhavik}
+            alt="bhavik"
+            style={{
+              height: isMd ? "200px" : "300px",
+              width: isMd ? "200px" : "300px",
+            }}
+          />
+        </motion.div>
       </Grid>
     </Grid.Container>
   );

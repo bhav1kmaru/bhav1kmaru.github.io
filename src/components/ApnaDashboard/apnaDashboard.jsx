@@ -49,7 +49,7 @@ const ApnaDashboard = () => {
       });
     }
     if (!isInView) {
-      animation.start({ x: "-100vw" });
+      animation.start({ x: "100vw" });
     }
     console.log("isInView", isInView);
   }, [isInView]);
