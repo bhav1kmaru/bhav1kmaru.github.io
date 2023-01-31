@@ -1,4 +1,4 @@
-import { Button, Input, Loading, Spacer, Text, Textarea } from '@nextui-org/react';
+import { Button, Image, Input, Loading, Spacer, Text, Textarea } from '@nextui-org/react';
 import React, { useContext, useEffect, useState } from 'react'
 import {motion} from 'framer-motion'
 import Link from 'next/link';

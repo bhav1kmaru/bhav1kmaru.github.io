@@ -8,6 +8,7 @@ import Stats from "./Stats";
 import Contact from "./Contact";
 import next from "./next.svg";
 import nextDark from "./nextDark.svg";
+import bvk from './bvk.png'
 import Image from "next/image";
 import Link from "next/link";
 
