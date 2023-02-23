@@ -13,6 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
+
 const MainPage = () => {
   const {isDark}=useTheme()
 
@@ -40,6 +41,7 @@ const MainPage = () => {
         </div>
         <Text>&</Text>
         <Image
+        className="App-logo"
           width="20"
           height="20"
           src="https://img.icons8.com/ultraviolet/48/null/react--v1.png"

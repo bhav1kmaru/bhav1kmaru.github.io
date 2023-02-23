@@ -4,6 +4,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import { createTheme} from "@nextui-org/react"
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import PageContextProvider from "../contexts/PageContext";
+import "../components/MainPage.css";
 
 // 2. Call `createTheme` and pass your custom values
 const lightTheme = createTheme({
