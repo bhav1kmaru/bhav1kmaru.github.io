@@ -11,10 +11,11 @@ import { useInView } from 'react-intersection-observer'
 import { PageContext } from '../contexts/PageContext'
 import { FaBeer } from "react-icons/fa";
 import {BsDownload} from "react-icons/bs"
+import aboutme from './about.png'
 
 const About = () => {
   const isMd=useMediaQuery(960)
-  const {ref,inView}=useInView()
+  const { ref, inView } = useInView();
   const {setCurrentPage}=useContext(PageContext)
   useEffect(()=>{
     if(inView){
@@ -24,7 +25,7 @@ const About = () => {
   return (
     <Grid.Container
       justify="center"
-      css={{ marginTop: isMd ? "" : "150px", width: "70%", margin: "auto" }}
+      css={{ marginTop: isMd ? "" : "350px", width: "70%", margin: "auto" }}
       direction={isMd ? "column" : "row"}
       // alignContent="center"
       // alignItems="center"
@@ -44,26 +45,22 @@ const About = () => {
               textGradient: "45deg, $blue600 -20%, $pink600 50%",
             }}
           >
-            <img
-              style={{ height: "50px" }}
-              src="https://em-content.zobj.net/source/microsoft-teams/337/waving-hand_medium-light-skin-tone_1f44b-1f3fc_1f3fc.png"
-            />
-            <br />
-            Hey folks, I am
-            <Typewriter
-              options={{
-                strings: ["Bhavik Maru", "A Full Stack Web Developer"],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+            About Me
           </Text>
+
           <Text p>
-            An ambitious Full Stack Developer who is comfortable working with
-            both front-end and back-end technologies. 1200+ hours of coding and
-            hands-on experience in developing various Web-Apps and programs
-            using Vanilla JavaScript and ReactJS. Looking forward to working as
-            an accountable and competent employee in an exciting tech company.
+            As a MERN stack developer, my expertise lies in creating robust,
+            dynamic, and scalable web applications using MongoDB, Express,
+            React, and Node.js. With a strong foundation in front-end and
+            back-end development, I specialize in building full-stack web
+            applications with a focus on delivering exceptional user
+            experiences. <br /> <br />
+            In my portfolio, you will find examples of my work, including
+            full-stack web applications that demonstrate my skills in front-end
+            and back-end development, API integration, and database management.
+            I am passionate about creating high-quality, user-friendly web
+            applications that solve real-world problems and look forward to
+            working with you on your next project.
           </Text>
         </motion.div>
         <motion.div
@@ -76,7 +73,7 @@ const About = () => {
           }}
           style={{ display: "flex", gap: "10px", marginTop: "10px" }}
         >
-          <Button
+          {/* <Button
             auto
             flat
             as={Link}
@@ -108,21 +105,20 @@ const About = () => {
               src="https://em-content.zobj.net/source/microsoft-teams/337/love-letter_1f48c.png"
             />
             Contact
-          </Button>
+          </Button> */}
         </motion.div>
       </Grid>
-
       <Grid>
         <motion.div
           whileInView={{ x: [200, 0], opacity: [0, 1] }}
           transition={{ duration: 1 }}
         >
           <Image
-            src={Bhavik}
+            src={aboutme}
             alt="bhavik"
             style={{
-              height: isMd ? "200px" : "300px",
-              width: isMd ? "200px" : "300px",
+              height: isMd ? "200px" : "400px",
+              width: isMd ? "200px" : "400px",
             }}
           />
         </motion.div>

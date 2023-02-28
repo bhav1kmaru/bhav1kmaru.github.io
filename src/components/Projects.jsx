@@ -10,6 +10,7 @@ import { PageContext } from '../contexts/PageContext';
 import { Container } from '@nextui-org/react';
 import { useTheme } from '@nextui-org/react';
 import "@splidejs/splide/css/skyblue";
+import Violeta from './Violeta/Violeta';
 
 const Projects = () => {
    const { ref, inView } = useInView({threshold:0.1})
@@ -49,9 +50,10 @@ const Projects = () => {
       </div>
       <div ref={ref} style={{ display: "grid", gap: "50px" }}>
         <Tripster />
-        <TripsterDashboard />
+        {/* <TripsterDashboard /> */}
         <ApnaMall />
-        <ApnaDashboard />
+        <Violeta />
+        {/* <ApnaDashboard /> */}
         <TrackingTime />
       </div>
     </div>

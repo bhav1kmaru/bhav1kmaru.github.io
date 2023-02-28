@@ -1,4 +1,4 @@
-import { Button, Text, useTheme } from "@nextui-org/react";
+import { Button, Text, useTheme, css } from "@nextui-org/react";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -6,54 +6,65 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useMediaQuery } from "../useMediaQuery";
 import Link from "next/link";
-import logo from './apnaLogoFinal.png'
-import apnaMallDesktop from "./apnaMallDesktop.png"
-import apnaMallMobile from "./apnaMallMobile.png"
-import apnaMallTablet from "./apnaMallTablet.png"
-import apnaMallMain from "./apnaMallMain.png"
-import hero from './hero.png'
-import next from './next.svg'
-import nextDark from './nextDark.svg'
+import logo from './violeta.png'
+import main from './main.png'
+
 //4
 
-const ApnaMall = () => {
+const Violeta = () => {
   const isMd = useMediaQuery(960);
-  const {isDark}=useTheme()
-const ref = useRef(null);
-const isInView = useInView(ref);
-const animation = useAnimation();
+  const { isDark } = useTheme();
 
-const cardVariants = {
-  offscreen: {
-    y: 300,
-  },
-  onscreen: {
-    y: 50,
-    rotate: 360,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8,
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const animation = useAnimation();
+
+  const cardVariants = {
+    offscreen: {
+      y: 300,
     },
-  },
-};
-
-useEffect(() => {
-  if (isInView) {
-    animation.start({
-      x: 0,
+    onscreen: {
+      y: 50,
+      rotate: 360,
       transition: {
         type: "spring",
-        duration: 1,
-        bounce: 0.3,
+        bounce: 0.4,
+        duration: 0.8,
       },
-    });
-  }
-  if (!isInView) {
-    animation.start({ x: "-100vw" });
-  }
-  console.log("isInView", isInView);
-}, [isInView]);
+    },
+  };
+
+    const backEnd = [
+      {
+        title: "Node.js",
+        icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/70/null/external-nodejs-is-an-open-source-cross-platform-javascript-run-time-environment-logo-color-tal-revivo.png",
+      },
+      {
+        title: "Express.js",
+        icon: "https://img.icons8.com/ios/70/07373B/express-js.png",
+      },
+      {
+        title: "MongoDB",
+        icon: "https://img.icons8.com/color/70/null/mongodb.png",
+      },
+    ];
+
+  useEffect(() => {
+    if (isInView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.3,
+        },
+      });
+    }
+    if (!isInView) {
+      animation.start({ x: "-100vw" });
+    }
+    console.log("isInView", isInView);
+  }, [isInView]);
 
   return (
     <div ref={ref}>
@@ -88,58 +99,29 @@ useEffect(() => {
           }}
         >
           <Image
-            style={{ height: "60px", width: "120px" }}
             src={logo}
             alt="logo"
+            style={{ height: "100px", width: "100px" }}
+          />
+          <Text h2 css={{ marginTop: "20px" }}>
+            Violeta
+          </Text>
+        </div>
+        <div>
+          <Image
+            style={{ height: isMd ? "200px" : "300px", width: "auto" }}
+            src={main}
+            alt="main"
           />
         </div>
-        <Splide options={{ rewind: true, interval: 3000, loop: true }}>
-          <SplideSlide>
-            <Image
-              src={hero}
-              style={{ height: isMd ? "200px" : "300px", width: "auto" }}
-              alt="Image 0"
-            />
-          </SplideSlide>
-          <SplideSlide>
-            <Image
-              src={apnaMallMain}
-              style={{ height: isMd ? "200px" : "auto" }}
-              alt="Image 0"
-            />
-          </SplideSlide>
-          <SplideSlide>
-            <Image
-              style={{ height: "300px", width: "auto" }}
-              src={apnaMallMobile}
-              alt="Image 1"
-            />
-          </SplideSlide>
-          <SplideSlide>
-            <Image
-              style={{
-                height: isMd ? "200px" : "300px",
-                width: "auto",
-                margin: "auto",
-              }}
-              src={apnaMallDesktop}
-              alt="Image 2"
-            />
-          </SplideSlide>
-          <SplideSlide>
-            <Image
-              style={{ height: isMd ? "200px" : "300px", width: "auto" }}
-              src={apnaMallTablet}
-              alt="Image 3"
-            />
-          </SplideSlide>
-        </Splide>
         <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
           <Text p css={{ textAlign: "center" }}>
-            Apna Mall is an e-commerce website that allows users to shop for a
-            wide range of products online. The website offers a vast collection
-            of products, including electronics, fashion, home and kitchen
-            appliances, beauty and personal care items, and more.
+            Violeta is an Indian online beauty and personal care platform. It
+            offers a wide range of beauty and personal care products, including
+            skincare, haircare, makeup, fragrances, and wellness items. The
+            platform also provides personalized beauty services and fast
+            shipping, ensuring a convenient shopping experience for its
+            customers.
           </Text>
         </div>
         <div
@@ -154,17 +136,6 @@ useEffect(() => {
           <Text h3 style={{ display: isMd ? "none" : "" }}>
             Tech Stack :
           </Text>
-          <div style={{ display: "flex", gap: "5px" }}>
-            <Image
-              width="30"
-              height="30"
-              src={isDark ? next : nextDark}
-              alt="next"
-            />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
-              |
-            </Text>
-          </div>
           <div style={{ display: "flex", gap: "5px" }}>
             <Image
               width="30"
@@ -191,31 +162,42 @@ useEffect(() => {
             <Image
               width="30"
               height="30"
-              src="https://img.icons8.com/external-soft-fill-juicy-fish/30/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"
-              alt="json"
+              src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/null/external-nodejs-is-an-open-source-cross-platform-javascript-run-time-environment-logo-color-tal-revivo.png"
+              alt="node"
             />
             <Text h3 style={{ display: isMd ? "none" : "" }}>
-              JSON Server |
+              Node.js |
             </Text>
           </div>
           <div style={{ display: "flex", gap: "5px" }}>
             <Image
               width="30"
               height="30"
-              src="https://img.icons8.com/fluency/30/null/api-settings.png"
-              alt="api"
+              src="https://img.icons8.com/ios/30/07373B/express-js.png"
+              alt="express"
             />
             <Text h3 style={{ display: isMd ? "none" : "" }}>
-              Rest API
+              Express |
+            </Text>
+          </div>
+          <div style={{ display: "flex", gap: "5px" }}>
+            <Image
+              width="30"
+              height="30"
+              src="https://img.icons8.com/color/70/null/mongodb.png"
+              alt="mongo"
+            />
+            <Text h3 style={{ display: isMd ? "none" : "" }}>
+              MongoDB |
             </Text>
           </div>
         </div>
         {/* </motion.div> */}
-        <div></div>
+
         <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
           <Button
             as={Link}
-            href="https://github.com/bhav1kmaru/apnaMall"
+            href="https://github.com/shivshankar0965/violeta"
             auto
             ghost
             color="gradient"
@@ -225,7 +207,7 @@ useEffect(() => {
           </Button>
           <Button
             as={Link}
-            href="https://apnamall.vercel.app/"
+            href="https://violeta-app.netlify.app/"
             auto
             ghost
             color="gradient"
@@ -243,7 +225,7 @@ useEffect(() => {
   );
 };
 
-export default ApnaMall;
+export default Violeta;
 
 // ReactJS |{" "}
 //         <img src="https://img.icons8.com/color/30/null/chakra-ui.png" /> Chakra
@@ -252,3 +234,8 @@ export default ApnaMall;
 //         JSON SERVER |
 //         <img src="https://img.icons8.com/fluency/30/null/api-settings.png" />
 //         REST API
+
+{
+  /* <img src='https://img.icons8.com/color/30/null/html-5--v1.png' /> HTML | <img src='https://img.icons8.com/color/30/null/css3.png' />
+          CSS | <img src='https://img.icons8.com/color/30/null/javascript--v1.png' /> JavaScript */
+}

@@ -11,6 +11,7 @@ import nextDark from "./nextDark.svg";
 import bvk from './bvk.png'
 import Image from "next/image";
 import Link from "next/link";
+import Home from "./Home";
 
 
 
@@ -20,6 +21,7 @@ const MainPage = () => {
   return (
     <div>
       <Bar />
+      <Home />
       <About />
       <Projects />
       <Skills />

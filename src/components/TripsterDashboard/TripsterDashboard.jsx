@@ -69,12 +69,12 @@ const TripsterDashboard = () => {
         animate={animation}
         // transition={{ type: "spring", duration: 1, bounce: 0.3 }}
       >
-        <motion.div
+        {/* <motion.div
           whileHover={{
             scale: 1.1,
             textShadow: "0px 0px 4px gray",
           }}
-        >
+        > */}
           <div
             style={{
               textAlign: "center",
@@ -88,6 +88,32 @@ const TripsterDashboard = () => {
               Tripster Dashboard
             </Text>
           </div>
+          <Splide
+            aria-label="My Favorite Images"
+            options={{ rewind: true, interval: 3000, loop: true }}
+          >
+            <SplideSlide>
+              <Image
+                src={dashboard}
+                style={{ height: isMd ? "200px" : "300px", width: "auto" }}
+                alt="Image 0"
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <Image
+                style={{ height: isMd ? "200px" : "auto" }}
+                src={tripsterDashboardMain}
+                alt="Image 1"
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <Image
+                style={{ height: "300px", width: "152px" }}
+                src={dashboardMobile}
+                alt="Image 2"
+              />
+            </SplideSlide>
+          </Splide>
           <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
             <Text p css={{ textAlign: "center" }}>
               Dashboard of an online travel website and mobile app with
@@ -110,9 +136,9 @@ const TripsterDashboard = () => {
             </Text>
             <div style={{ display: "flex", gap: "5px" }}>
               <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/ultraviolet/48/null/react--v1.png"
+                width="30"
+                height="30"
+                src="https://img.icons8.com/ultraviolet/30/null/react--v1.png"
                 alt="react"
               />
               <Text h3 style={{ display: isMd ? "none" : "" }}>
@@ -121,9 +147,9 @@ const TripsterDashboard = () => {
             </div>
             <div style={{ display: "flex", gap: "5px" }}>
               <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/null/material-ui.png"
+                width="30"
+                height="30"
+                src="https://img.icons8.com/color/30/null/material-ui.png"
                 alt="material"
               />
               <Text h3 style={{ display: isMd ? "none" : "" }}>
@@ -132,9 +158,9 @@ const TripsterDashboard = () => {
             </div>
             <div style={{ display: "flex", gap: "5px" }}>
               <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/external-soft-fill-juicy-fish/48/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"
+                width="30"
+                height="30"
+                src="https://img.icons8.com/external-soft-fill-juicy-fish/30/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"
                 alt="json"
               />
               <Text h3 style={{ display: isMd ? "none" : "" }}>
@@ -143,9 +169,9 @@ const TripsterDashboard = () => {
             </div>
             <div style={{ display: "flex", gap: "5px" }}>
               <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/fluency/48/null/api-settings.png"
+                width="30"
+                height="30"
+                src="https://img.icons8.com/fluency/30/null/api-settings.png"
                 alt="api"
               />
               <Text h3 style={{ display: isMd ? "none" : "" }}>
@@ -153,35 +179,8 @@ const TripsterDashboard = () => {
               </Text>
             </div>
           </div>
-        </motion.div>
-        <div>
-          <Splide
-            aria-label="My Favorite Images"
-            options={{ rewind: true, interval: 3000, loop: true }}
-          >
-            <SplideSlide>
-              <Image
-                src={tripsterDashboardMain}
-                style={{ height: isMd ? "200px" : "auto" }}
-                alt="Image 0"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Image
-                style={{ height: isMd ? "200px" : "300px", width: "auto" }}
-                src={dashboard}
-                alt="Image 1"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Image
-                style={{ height: "300px", width: "152px" }}
-                src={dashboardMobile}
-                alt="Image 2"
-              />
-            </SplideSlide>
-          </Splide>
-        </div>
+        {/* </motion.div> */}
+        <div></div>
         <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
           <Button
             as={Link}
@@ -214,9 +213,9 @@ const TripsterDashboard = () => {
 export default TripsterDashboard;
 
 // ReactJS |{" "}
-//         <Image src="https://img.icons8.com/color/48/null/chakra-ui.png" /> Chakra
+//         <Image src="https://img.icons8.com/color/30/null/chakra-ui.png" /> Chakra
 //         UI | {" "}
-//         <Image src="https://img.icons8.com/external-soft-fill-juicy-fish/48/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png" />{" "}
+//         <Image src="https://img.icons8.com/external-soft-fill-juicy-fish/30/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png" />{" "}
 //         JSON SERVER |
-//         <Image src="https://img.icons8.com/fluency/48/null/api-settings.png" />
+//         <Image src="https://img.icons8.com/fluency/30/null/api-settings.png" />
 //         REST API

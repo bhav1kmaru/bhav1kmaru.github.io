@@ -153,7 +153,7 @@ const Skills = () => {
         transition={{ duration: 1 }}
       >
         <h2 style={{ marginTop: "50px" }}>Tools</h2>
-        <div style={{ marginTop: "40px" }} align="center">
+        <div style={{ marginTop: "40px",display:"grid",gap:"20px",gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr" }} align="center">
           <img
             src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"
             align="center"

@@ -109,9 +109,9 @@ const ApnaDashboard = () => {
             </Text>
             <div style={{ display: "flex", gap: "5px" }}>
               <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/ultraviolet/48/null/react--v1.png"
+                width="30"
+                height="30"
+                src="https://img.icons8.com/ultraviolet/30/null/react--v1.png"
                 alt="react"
               />
               <Text h3 style={{ display: isMd ? "none" : "" }}>
@@ -120,9 +120,9 @@ const ApnaDashboard = () => {
             </div>
             <div style={{ display: "flex", gap: "5px" }}>
               <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/null/material-ui.png"
+                width="30"
+                height="30"
+                src="https://img.icons8.com/color/30/null/material-ui.png"
                 alt="material"
               />
               <Text h3 style={{ display: isMd ? "none" : "" }}>
@@ -131,9 +131,9 @@ const ApnaDashboard = () => {
             </div>
             <div style={{ display: "flex", gap: "5px" }}>
               <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/external-soft-fill-juicy-fish/48/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"
+                width="30"
+                height="30"
+                src="https://img.icons8.com/external-soft-fill-juicy-fish/30/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"
                 alt="json"
               />
               <Text h3 style={{ display: isMd ? "none" : "" }}>
@@ -142,9 +142,9 @@ const ApnaDashboard = () => {
             </div>
             <div style={{ display: "flex", gap: "5px" }}>
               <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/fluency/48/null/api-settings.png"
+                width="30"
+                height="30"
+                src="https://img.icons8.com/fluency/30/null/api-settings.png"
                 alt="api"
               />
               <Text h3 style={{ display: isMd ? "none" : "" }}>
@@ -221,9 +221,9 @@ const ApnaDashboard = () => {
 export default ApnaDashboard;
 
 // ReactJS |{" "}
-//         <img src="https://img.icons8.com/color/48/null/chakra-ui.png" /> Chakra
+//         <img src="https://img.icons8.com/color/30/null/chakra-ui.png" /> Chakra
 //         UI | {" "}
-//         <img src="https://img.icons8.com/external-soft-fill-juicy-fish/48/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png" />{" "}
+//         <img src="https://img.icons8.com/external-soft-fill-juicy-fish/30/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png" />{" "}
 //         JSON SERVER |
-//         <img src="https://img.icons8.com/fluency/48/null/api-settings.png" />
+//         <img src="https://img.icons8.com/fluency/30/null/api-settings.png" />
 //         REST API

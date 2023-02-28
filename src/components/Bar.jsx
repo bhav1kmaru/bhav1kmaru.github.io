@@ -40,7 +40,7 @@ const ThemeToggler = () => {
 };
 
 export default function Bar() {
-  const collapseItems = ["About", "Projects", "Skills", "Stats", "Contact"];
+  const collapseItems = ["Home","About", "Projects", "Skills", "Stats", "Contact"];
   const { isDark, type } = useTheme();
   const {currentPage}=useContext(PageContext)
   const router=useRouter()
@@ -72,7 +72,7 @@ export default function Bar() {
           }}
         /> */}
         <Navbar.Content>
-          <Navbar.Link href='#about'>
+          <Navbar.Link href='#home'>
             <img
               style={{ height: "30px" }}
               src="https://em-content.zobj.net/source/microsoft-teams/337/rocket_1f680.png"

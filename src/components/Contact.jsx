@@ -63,7 +63,10 @@ const Contact = () => {
           gridTemplateColumns: "1fr 1fr",
         }}
       >
-        <Link href="https://www.linkedin.com/in/bhavik-maru-9b52b31b9/">
+        <Link
+          href="https://www.linkedin.com/in/bhavik-maru-9b52b31b9/"
+          target="_blank"
+        >
           <motion.div
             whileHover={{
               scale: 1.1,
@@ -75,7 +78,7 @@ const Contact = () => {
             <Text>LinkedIn</Text>
           </motion.div>
         </Link>
-        <Link href="https://github.com/bhav1kmaru">
+        <Link href="https://github.com/bhav1kmaru" target="_blank">
           <motion.div
             whileHover={{
               scale: 1.1,

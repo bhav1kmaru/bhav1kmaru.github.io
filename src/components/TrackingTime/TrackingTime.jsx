@@ -69,80 +69,27 @@ const TrackingTime = () => {
         // viewport={{ once: true, amount: 0.8 }}
         animate={animation}
       >
-        <motion.div
+        {/* <motion.div
           whileHover={{
             scale: 1.1,
             textShadow: "0px 0px 4px gray",
           }}
+        > */}
+        <div
+          style={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          <div
-            style={{
-              textAlign: "center",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Image
-              src="https://trackingtime.co/wp-content/themes/trackingtime-v5/img/layout/header/logo.svg"
-              alt="logo"
-              height="100"
-              width="300"
-            />
-          </div>
-          <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
-            <Text p css={{ textAlign: "center" }}>
-              TrackingTime is an intuitive Time Tracking Software. Simplify
-              Timesheets. Get accurate clients, project and employee reports.
-            </Text>
-          </div>
-          <div
-            style={{
-              alignItems: "center",
-              alignContent: "center",
-              display: "flex",
-              justifyContent: "center",
-              gap: "10px",
-            }}
-          >
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
-              Tech Stack :
-            </Text>
-            <div style={{ display: "flex", gap: "5px" }}>
-              <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/null/html-5--v1.png"
-                alt="html"
-              />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
-                HTML |
-              </Text>
-            </div>
-            <div style={{ display: "flex", gap: "5px" }}>
-              <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/null/css3.png"
-                alt="css"
-              />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
-                CSS |
-              </Text>
-            </div>
-            <div style={{ display: "flex", gap: "5px" }}>
-              <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/null/javascript--v1.png"
-                alt="js"
-              />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
-                JavaScript
-              </Text>
-            </div>
-          </div>
-        </motion.div>
+          <Image
+            src="https://trackingtime.co/wp-content/themes/trackingtime-v5/img/layout/header/logo.svg"
+            alt="logo"
+            height="100"
+            width="300"
+          />
+        </div>
         <div>
           <Image
             style={{ height: "auto", width: "auto" }}
@@ -150,6 +97,63 @@ const TrackingTime = () => {
             alt="main"
           />
         </div>
+        <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
+          <Text p css={{ textAlign: "center" }}>
+            TrackingTime is a web-based time tracking and productivity tool
+            designed to help individuals and teams manage their work hours,
+            projects, and tasks. With TrackingTime, users can easily monitor and
+            record their time spent on various activities, and generate detailed
+            reports and analytics to analyze their productivity and progress.
+          </Text>
+        </div>
+        <div
+          style={{
+            alignItems: "center",
+            alignContent: "center",
+            display: "flex",
+            justifyContent: "center",
+            gap: "10px",
+          }}
+        >
+          <Text h3 style={{ display: isMd ? "none" : "" }}>
+            Tech Stack :
+          </Text>
+          <div style={{ display: "flex", gap: "5px" }}>
+            <Image
+              width="30"
+              height="30"
+              src="https://img.icons8.com/color/30/null/html-5--v1.png"
+              alt="html"
+            />
+            <Text h3 style={{ display: isMd ? "none" : "" }}>
+              HTML |
+            </Text>
+          </div>
+          <div style={{ display: "flex", gap: "5px" }}>
+            <Image
+              width="30"
+              height="30"
+              src="https://img.icons8.com/color/30/null/css3.png"
+              alt="css"
+            />
+            <Text h3 style={{ display: isMd ? "none" : "" }}>
+              CSS |
+            </Text>
+          </div>
+          <div style={{ display: "flex", gap: "5px" }}>
+            <Image
+              width="30"
+              height="30"
+              src="https://img.icons8.com/color/30/null/javascript--v1.png"
+              alt="js"
+            />
+            <Text h3 style={{ display: isMd ? "none" : "" }}>
+              JavaScript
+            </Text>
+          </div>
+        </div>
+        {/* </motion.div> */}
+
         <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
           <Button
             as={Link}
@@ -157,6 +161,7 @@ const TrackingTime = () => {
             auto
             ghost
             color="gradient"
+            target="_blank"
           >
             Source Code 🖥️
           </Button>
@@ -166,6 +171,7 @@ const TrackingTime = () => {
             auto
             ghost
             color="gradient"
+            target="_blank"
           >
             Live Demo{" "}
             <img
@@ -182,12 +188,12 @@ const TrackingTime = () => {
 export default TrackingTime;
 
 // ReactJS |{" "}
-//         <img src="https://img.icons8.com/color/48/null/chakra-ui.png" /> Chakra
+//         <img src="https://img.icons8.com/color/30/null/chakra-ui.png" /> Chakra
 //         UI | {" "}
-//         <img src="https://img.icons8.com/external-soft-fill-juicy-fish/48/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png" />{" "}
+//         <img src="https://img.icons8.com/external-soft-fill-juicy-fish/30/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png" />{" "}
 //         JSON SERVER |
-//         <img src="https://img.icons8.com/fluency/48/null/api-settings.png" />
+//         <img src="https://img.icons8.com/fluency/30/null/api-settings.png" />
 //         REST API
 
-{/* <img src='https://img.icons8.com/color/48/null/html-5--v1.png' /> HTML | <img src='https://img.icons8.com/color/48/null/css3.png' />
-          CSS | <img src='https://img.icons8.com/color/48/null/javascript--v1.png' /> JavaScript */}
+{/* <img src='https://img.icons8.com/color/30/null/html-5--v1.png' /> HTML | <img src='https://img.icons8.com/color/30/null/css3.png' />
+          CSS | <img src='https://img.icons8.com/color/30/null/javascript--v1.png' /> JavaScript */}

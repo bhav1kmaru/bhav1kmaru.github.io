@@ -7,6 +7,7 @@ import tripsterMobile from './tripsterMobile.png'
 import tripsterDesktop from './tripsterDesktop.png'
 import tripsterTablet from './tripsterTablet.png'
 import tripsterMain from './tripsterMain.png'
+import hero from './hero.png'
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useMediaQuery } from '../useMediaQuery';
@@ -80,127 +81,133 @@ const Tripster = () => {
         animate={animation}
         // transition={{type:"spring",duration:1,bounce:0.3}}
       >
-        <motion.div
+        {/* <motion.div
           whileHover={{
             scale: 1.1,
             textShadow: "0px 0px 4px gray",
           }}
+        > */}
+        <div
+          style={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          <div
-            style={{
-              textAlign: "center",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Image src={logo} alt="logo" />
-            <Text h1 css={{ marginTop: "20px" }}>
-              Tripster
-            </Text>
-          </div>
-          <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
-            <Text p css={{ textAlign: "center" }}>
-              Tripster is an online travel website and mobile app with
-              user-generated content and a comparison shopping website. It also
-              offers online hotel reservations and bookings for transportation,
-              lodging, travel experiences, and restaurants.
-            </Text>
-          </div>
-          <div
-            style={{
-              alignItems: "center",
-              alignContent: "center",
-              display: "flex",
-              justifyContent: "center",
-              gap: "10px",
-            }}
-          >
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
-              Tech Stack :
-            </Text>
-            <div style={{ display: "flex", gap: "5px" }}>
-              <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/ultraviolet/48/null/react--v1.png"
-                alt="react"
-              />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
-                ReactJS |
-              </Text>
-            </div>
-            <div style={{ display: "flex", gap: "5px" }}>
-              <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/null/chakra-ui.png"
-                alt="chakra"
-              />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
-                Chakra UI |
-              </Text>
-            </div>
-            <div style={{ display: "flex", gap: "5px" }}>
-              <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/external-soft-fill-juicy-fish/48/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"
-                alt="json"
-              />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
-                JSON Server |
-              </Text>
-            </div>
-            <div style={{ display: "flex", gap: "5px" }}>
-              <Image
-                width="48"
-                height="48"
-                src="https://img.icons8.com/fluency/48/null/api-settings.png"
-                alt="api"
-              />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
-                Rest API
-              </Text>
-            </div>
-          </div>
-        </motion.div>
-        <div>
-          <Splide options={{ rewind: true, interval: 3000, loop: true }}>
-            <SplideSlide>
-              <Image
-                src={tripsterMain}
-                style={{ height: isMd ? "200px" : "auto" }}
-                alt="Image 0"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Image
-                style={{ height: "300px", width: "152px" }}
-                src={tripsterMobile}
-                alt="Image 1"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Image
-                style={{
-                  height: isMd ? "200px" : "300px",
-                  width: "auto",
-                  margin: "auto",
-                }}
-                src={tripsterDesktop}
-                alt="Image 2"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Image
-                style={{ height: isMd ? "200px" : "300px", width: "auto" }}
-                src={tripsterTablet}
-                alt="Image 3"
-              />
-            </SplideSlide>
-          </Splide>
+          <Image src={logo} alt="logo" />
+          <Text h2 css={{ marginTop: "20px" }}>
+            Tripster
+          </Text>
         </div>
+        <Splide options={{ rewind: true, interval: 3000, loop: true }}>
+          <SplideSlide>
+            <Image
+              src={hero}
+              style={{ height: isMd ? "200px" : "300px", width: "auto" }}
+              alt="Image 0"
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <Image
+              src={tripsterMain}
+              style={{ height: isMd ? "200px" : "auto" }}
+              alt="Image 0"
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <Image
+              style={{ height: "300px", width: "152px" }}
+              src={tripsterMobile}
+              alt="Image 1"
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <Image
+              style={{
+                height: isMd ? "200px" : "300px",
+                width: "auto",
+                margin: "auto",
+              }}
+              src={tripsterDesktop}
+              alt="Image 2"
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <Image
+              style={{ height: isMd ? "200px" : "300px", width: "auto" }}
+              src={tripsterTablet}
+              alt="Image 3"
+            />
+          </SplideSlide>
+        </Splide>
+        <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
+          <Text p css={{ textAlign: "center" }}>
+            Tripster is an online travel website and mobile app with
+            user-generated content and a comparison shopping website. It also
+            offers online hotel reservations and bookings for transportation,
+            lodging, travel experiences, and restaurants.
+          </Text>
+        </div>
+        <div
+          style={{
+            alignItems: "center",
+            alignContent: "center",
+            display: "flex",
+            justifyContent: "center",
+            gap: "10px",
+          }}
+        >
+          <Text h3 style={{ display: isMd ? "none" : "" }}>
+            Tech Stack :
+          </Text>
+          <div style={{ display: "flex", gap: "5px" }}>
+            <Image
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ultraviolet/30/null/react--v1.png"
+              alt="react"
+            />
+            <Text h3 style={{ display: isMd ? "none" : "" }}>
+              ReactJS |
+            </Text>
+          </div>
+          <div style={{ display: "flex", gap: "5px" }}>
+            <Image
+              width="30"
+              height="30"
+              src="https://img.icons8.com/color/30/null/chakra-ui.png"
+              alt="chakra"
+            />
+            <Text h3 style={{ display: isMd ? "none" : "" }}>
+              Chakra UI |
+            </Text>
+          </div>
+          <div style={{ display: "flex", gap: "5px" }}>
+            <Image
+              width="30"
+              height="30"
+              src="https://img.icons8.com/external-soft-fill-juicy-fish/30/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"
+              alt="json"
+            />
+            <Text h3 style={{ display: isMd ? "none" : "" }}>
+              JSON Server |
+            </Text>
+          </div>
+          <div style={{ display: "flex", gap: "5px" }}>
+            <Image
+              width="30"
+              height="30"
+              src="https://img.icons8.com/fluency/30/null/api-settings.png"
+              alt="api"
+            />
+            <Text h3 style={{ display: isMd ? "none" : "" }}>
+              Rest API
+            </Text>
+          </div>
+        </div>
+        {/* </motion.div> */}
+        <div></div>
         <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
           <Button
             as={Link}
@@ -208,6 +215,7 @@ const Tripster = () => {
             auto
             ghost
             color="gradient"
+            target="_blank"
           >
             Source Code 🖥️
           </Button>
@@ -217,6 +225,7 @@ const Tripster = () => {
             auto
             ghost
             color="gradient"
+            target="_blank"
           >
             Live Demo{" "}
             <img
@@ -233,9 +242,9 @@ const Tripster = () => {
 export default Tripster
 
 // ReactJS |{" "}
-//         <img src="https://img.icons8.com/color/48/null/chakra-ui.png" /> Chakra
+//         <img src="https://img.icons8.com/color/30/null/chakra-ui.png" /> Chakra
 //         UI | {" "}
-//         <img src="https://img.icons8.com/external-soft-fill-juicy-fish/48/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png" />{" "}
+//         <img src="https://img.icons8.com/external-soft-fill-juicy-fish/30/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png" />{" "}
 //         JSON SERVER |
-//         <img src="https://img.icons8.com/fluency/48/null/api-settings.png" />
+//         <img src="https://img.icons8.com/fluency/30/null/api-settings.png" />
 //         REST API
