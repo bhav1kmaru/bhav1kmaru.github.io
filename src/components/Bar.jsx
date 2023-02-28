@@ -71,20 +71,24 @@ export default function Bar() {
             loop: true,
           }}
         /> */}
-        <img
-          style={{ height: "30px" }}
-          src="https://em-content.zobj.net/source/microsoft-teams/337/rocket_1f680.png"
-        />
-        <Text
-          css={{
-            cursor: "pointer",
-            "&:hover": {
-              textGradient: "45deg, $blue600 -20%, $pink600 50%",
-            },
-          }}
-        >
-          Bhavik Maru
-        </Text>
+        <Navbar.Content>
+          <Navbar.Link href='#about'>
+            <img
+              style={{ height: "30px" }}
+              src="https://em-content.zobj.net/source/microsoft-teams/337/rocket_1f680.png"
+            />
+            <Text
+              css={{
+                cursor: "pointer",
+                "&:hover": {
+                  textGradient: "45deg, $blue600 -20%, $pink600 50%",
+                },
+              }}
+            >
+              Bhavik Maru
+            </Text>
+          </Navbar.Link>
+        </Navbar.Content>
       </Navbar.Brand>
       <Navbar.Content
         enableCursorHighlight
