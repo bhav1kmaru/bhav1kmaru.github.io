@@ -98,7 +98,7 @@ const TrackingTime = () => {
           />
         </div>
         <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
-          <Text p css={{ textAlign: "center" }}>
+          <Text p css={{ textAlign: "start" }}>
             TrackingTime is a web-based time tracking and productivity tool
             designed to help individuals and teams manage their work hours,
             projects, and tasks. With TrackingTime, users can easily monitor and

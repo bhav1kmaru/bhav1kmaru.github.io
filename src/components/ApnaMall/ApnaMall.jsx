@@ -135,7 +135,7 @@ useEffect(() => {
           </SplideSlide>
         </Splide>
         <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
-          <Text p css={{ textAlign: "center" }}>
+          <Text p css={{ textAlign: "start" }}>
             Apna Mall is an e-commerce website that allows users to shop for a
             wide range of products online. The website offers a vast collection
             of products, including electronics, fashion, home and kitchen

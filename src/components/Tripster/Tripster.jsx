@@ -142,7 +142,7 @@ const Tripster = () => {
           </SplideSlide>
         </Splide>
         <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
-          <Text p css={{ textAlign: "center" }}>
+          <Text p css={{ textAlign: "start" }}>
             Tripster is an online travel website and mobile app with
             user-generated content and a comparison shopping website. It also
             offers online hotel reservations and bookings for transportation,

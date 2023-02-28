@@ -115,7 +115,7 @@ const Violeta = () => {
           />
         </div>
         <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
-          <Text p css={{ textAlign: "center" }}>
+          <Text p css={{ textAlign: "start" }}>
             Violeta is an Indian online beauty and personal care platform. It
             offers a wide range of beauty and personal care products, including
             skincare, haircare, makeup, fragrances, and wellness items. The
@@ -223,7 +223,7 @@ const Violeta = () => {
       </motion.div>
     </div>
   );
-};
+}
 
 export default Violeta;
 
