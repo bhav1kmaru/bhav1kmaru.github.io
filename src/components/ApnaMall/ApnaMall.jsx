@@ -90,8 +90,10 @@ useEffect(() => {
           </div>
           <div style={{ width: isMd ? "100%" : "50%", margin: "auto" }}>
             <Text p css={{ textAlign: "center" }}>
-              Apna Mall is an e-commerce website to buy Clothes,
-              Groceries,Furniture and Jewellery.
+              Apna Mall is an e-commerce website that allows users to shop for
+              a wide range of products online. The website offers a vast
+              collection of products, including electronics, fashion, home and
+              kitchen appliances, beauty and personal care items, and more.
             </Text>
           </div>
           <div
