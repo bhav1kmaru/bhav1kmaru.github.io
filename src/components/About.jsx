@@ -47,7 +47,8 @@ const About = () => {
             <img
               style={{ height: "50px" }}
               src="https://em-content.zobj.net/source/microsoft-teams/337/waving-hand_medium-light-skin-tone_1f44b-1f3fc_1f3fc.png"
-            /><br />
+            />
+            <br />
             Hey folks, I am
             <Typewriter
               options={{
@@ -80,10 +81,10 @@ const About = () => {
             flat
             as={Link}
             color="secondary"
-            href="https://drive.google.com/u/1/uc?id=1iBR5xvNA5VWReQdgMquWYTKOk4q5WAQK&export=download"
+            href="https://drive.google.com/uc?export=download&id=1S5FN2i71HJzDNz48__EjI53F472zLVaT"
             onClick={() => {
               window.open(
-                "https://drive.google.com/file/d/1iBR5xvNA5VWReQdgMquWYTKOk4q5WAQK/view?usp=sharing",
+                "https://drive.google.com/file/d/1S5FN2i71HJzDNz48__EjI53F472zLVaT/view?usp=sharing",
                 "_blank"
               );
             }}
@@ -102,7 +103,10 @@ const About = () => {
             </div>
           </Button>
           <Button auto flat as={Link} href="#contact" color="gradient">
-            <img style={{height:"30px"}} src='https://em-content.zobj.net/source/microsoft-teams/337/love-letter_1f48c.png' />
+            <img
+              style={{ height: "30px" }}
+              src="https://em-content.zobj.net/source/microsoft-teams/337/love-letter_1f48c.png"
+            />
             Contact
           </Button>
         </motion.div>
@@ -128,3 +132,6 @@ const About = () => {
 }
 
 export default About
+
+
+//https://drive.google.com/u/1/uc?id=1iBR5xvNA5VWReQdgMquWYTKOk4q5WAQK&export=download
