@@ -31,7 +31,6 @@ const About = () => {
       // alignItems="center"
       id="about"
       gap={2}
-      ref={ref}
     >
       <Grid css={{ width: isMd ? "100%" : "50%" }}>
         <motion.div
@@ -48,7 +47,7 @@ const About = () => {
             About Me
           </Text>
 
-          <Text p>
+          <Text p ref={ref}>
             As a MERN stack developer, my expertise lies in creating robust,
             dynamic, and scalable web applications using MongoDB, Express,
             React, and Node.js. With a strong foundation in front-end and
