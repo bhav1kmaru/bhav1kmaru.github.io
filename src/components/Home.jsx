@@ -24,12 +24,12 @@ const Home = () => {
   return (
     <Grid.Container
       justify="center"
-      css={{ marginTop: isMd ? "" : "150px", width: "70%", margin: "auto" }}
+      css={{ marginTop: isMd ? "" : "90px", width: "70%", margin: "auto" }}
       direction={isMd ? "column" : "row"}
       // alignContent="center"
       // alignItems="center"
       id="home"
-      gap={2}
+      gap={3}
       ref={ref}
     >
       <Grid>
@@ -57,6 +57,7 @@ const Home = () => {
             css={{
               gap: "10px",
               textGradient: "45deg, $blue600 -20%, $pink600 50%",
+              marginTop:"-60px"
             }}
           >
             <img
