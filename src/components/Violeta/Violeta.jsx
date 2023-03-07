@@ -143,8 +143,19 @@ const Violeta = () => {
               src="https://img.icons8.com/ultraviolet/30/null/react--v1.png"
               alt="react"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               ReactJS |
+            </Text>
+          </div>
+          <div style={{ display: "flex", gap: "5px" }}>
+            <Image
+              width="30"
+              height="30"
+              src="https://img.icons8.com/color/30/null/redux.png"
+              alt="redux"
+            />
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
+              Redux |
             </Text>
           </div>
           <div style={{ display: "flex", gap: "5px" }}>
@@ -154,7 +165,7 @@ const Violeta = () => {
               src="https://img.icons8.com/color/30/null/chakra-ui.png"
               alt="chakra"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               Chakra UI |
             </Text>
           </div>
@@ -165,7 +176,7 @@ const Violeta = () => {
               src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/null/external-nodejs-is-an-open-source-cross-platform-javascript-run-time-environment-logo-color-tal-revivo.png"
               alt="node"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               Node.js |
             </Text>
           </div>
@@ -176,7 +187,7 @@ const Violeta = () => {
               src="https://img.icons8.com/ios/30/07373B/express-js.png"
               alt="express"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               Express |
             </Text>
           </div>
@@ -187,8 +198,8 @@ const Violeta = () => {
               src="https://img.icons8.com/color/70/null/mongodb.png"
               alt="mongo"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
-              MongoDB |
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
+              MongoDB
             </Text>
           </div>
         </div>

@@ -156,12 +156,12 @@ useEffect(() => {
           </Text>
           <div style={{ display: "flex", gap: "5px" }}>
             <Image
-              width="30"
-              height="30"
+              width="40"
+              height="35"
               src={isDark ? next : nextDark}
               alt="next"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               |
             </Text>
           </div>
@@ -172,7 +172,7 @@ useEffect(() => {
               src="https://img.icons8.com/ultraviolet/30/null/react--v1.png"
               alt="react"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               ReactJS |
             </Text>
           </div>
@@ -183,7 +183,7 @@ useEffect(() => {
               src="https://img.icons8.com/color/30/null/chakra-ui.png"
               alt="chakra"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               Chakra UI |
             </Text>
           </div>
@@ -194,7 +194,7 @@ useEffect(() => {
               src="https://img.icons8.com/external-soft-fill-juicy-fish/30/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"
               alt="json"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               JSON Server |
             </Text>
           </div>
@@ -205,7 +205,7 @@ useEffect(() => {
               src="https://img.icons8.com/fluency/30/null/api-settings.png"
               alt="api"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               Rest API
             </Text>
           </div>

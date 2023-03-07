@@ -141,7 +141,7 @@ const TripsterDashboard = () => {
                 src="https://img.icons8.com/ultraviolet/30/null/react--v1.png"
                 alt="react"
               />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
+              <Text h4 style={{ display: isMd ? "none" : "" }}>
                 ReactJS |
               </Text>
             </div>
@@ -152,7 +152,7 @@ const TripsterDashboard = () => {
                 src="https://img.icons8.com/color/30/null/material-ui.png"
                 alt="material"
               />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
+              <Text h4 style={{ display: isMd ? "none" : "" }}>
                 Material UI |
               </Text>
             </div>
@@ -163,7 +163,7 @@ const TripsterDashboard = () => {
                 src="https://img.icons8.com/external-soft-fill-juicy-fish/30/null/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"
                 alt="json"
               />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
+              <Text h4 style={{ display: isMd ? "none" : "" }}>
                 JSON Server |
               </Text>
             </div>
@@ -174,7 +174,7 @@ const TripsterDashboard = () => {
                 src="https://img.icons8.com/fluency/30/null/api-settings.png"
                 alt="api"
               />
-              <Text h3 style={{ display: isMd ? "none" : "" }}>
+              <Text h4 style={{ display: isMd ? "none" : "" }}>
                 Rest API
               </Text>
             </div>

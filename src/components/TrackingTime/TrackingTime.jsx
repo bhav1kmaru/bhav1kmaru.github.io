@@ -125,7 +125,7 @@ const TrackingTime = () => {
               src="https://img.icons8.com/color/30/null/html-5--v1.png"
               alt="html"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               HTML |
             </Text>
           </div>
@@ -136,7 +136,7 @@ const TrackingTime = () => {
               src="https://img.icons8.com/color/30/null/css3.png"
               alt="css"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               CSS |
             </Text>
           </div>
@@ -147,7 +147,7 @@ const TrackingTime = () => {
               src="https://img.icons8.com/color/30/null/javascript--v1.png"
               alt="js"
             />
-            <Text h3 style={{ display: isMd ? "none" : "" }}>
+            <Text h4 style={{ display: isMd ? "none" : "" }}>
               JavaScript
             </Text>
           </div>
