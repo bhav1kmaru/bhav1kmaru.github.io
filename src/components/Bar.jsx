@@ -72,7 +72,7 @@ export default function Bar() {
           }}
         /> */}
         <Navbar.Content>
-          <Navbar.Link href='#home'>
+          <Navbar.Link href="#home">
             <img
               style={{ height: "30px" }}
               src="https://em-content.zobj.net/source/microsoft-teams/337/rocket_1f680.png"
@@ -118,10 +118,10 @@ export default function Bar() {
           flat
           as={Link}
           color="secondary"
-          href="https://drive.google.com/uc?export=download&id=1S5FN2i71HJzDNz48__EjI53F472zLVaT"
+          href="https://drive.google.com/u/1/uc?id=1iBR5xvNA5VWReQdgMquWYTKOk4q5WAQK&export=download"
           onClick={() => {
             window.open(
-              "https://drive.google.com/file/d/1S5FN2i71HJzDNz48__EjI53F472zLVaT/view?usp=sharing",
+              "https://drive.google.com/file/d/1iBR5xvNA5VWReQdgMquWYTKOk4q5WAQK/view?usp=sharing",
               "_blank"
             );
           }}
@@ -184,10 +184,10 @@ export default function Bar() {
             flat
             as={Link}
             color="secondary"
-            href="https://drive.google.com/uc?export=download&id=1S5FN2i71HJzDNz48__EjI53F472zLVaT"
+            href="https://drive.google.com/u/1/uc?id=1iBR5xvNA5VWReQdgMquWYTKOk4q5WAQK&export=download"
             onClick={() => {
               window.open(
-                "https://drive.google.com/file/d/1S5FN2i71HJzDNz48__EjI53F472zLVaT/view?usp=sharing",
+                "https://drive.google.com/file/d/1iBR5xvNA5VWReQdgMquWYTKOk4q5WAQK/view?usp=sharing",
                 "_blank"
               );
             }}

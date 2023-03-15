@@ -57,7 +57,7 @@ const Home = () => {
             css={{
               gap: "10px",
               textGradient: "45deg, $blue600 -20%, $pink600 50%",
-              marginTop:"-60px"
+              marginTop: "-60px",
             }}
           >
             <img
@@ -105,10 +105,10 @@ const Home = () => {
             flat
             as={Link}
             color="secondary"
-            href="https://drive.google.com/uc?export=download&id=1S5FN2i71HJzDNz48__EjI53F472zLVaT"
+            href="https://drive.google.com/u/1/uc?id=1iBR5xvNA5VWReQdgMquWYTKOk4q5WAQK&export=download"
             onClick={() => {
               window.open(
-                "https://drive.google.com/file/d/1S5FN2i71HJzDNz48__EjI53F472zLVaT/view?usp=sharing",
+                "https://drive.google.com/file/d/1iBR5xvNA5VWReQdgMquWYTKOk4q5WAQK/view?usp=sharing",
                 "_blank"
               );
             }}
