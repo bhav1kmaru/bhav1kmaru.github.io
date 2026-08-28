@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import bkLanding from '../../assets/campaigns/bk-landing.mp4';
 import portalLanding from '../../assets/campaigns/portal-landing-page2.mp4';
@@ -54,7 +54,7 @@ const renderMedia = (src: string, index: number, prefix: string) => {
   );
 };
 
-function useSwipeable(rowRef: React.RefObject<HTMLDivElement>) {
+function useSwipeable(rowRef: React.RefObject<HTMLDivElement | null>) {
   const dragOffset = useRef(0);
   const isDragging = useRef(false);
   const startX = useRef(0);

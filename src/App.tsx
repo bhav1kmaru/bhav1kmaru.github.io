@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { LoaderContext } from './context/LoaderContext'
 import { HeroSection } from './components/sections/HeroSection'
 import { MarqueeSection } from './components/sections/MarqueeSection'

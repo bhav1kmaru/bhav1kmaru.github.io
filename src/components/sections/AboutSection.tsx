@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FadeIn } from '../ui/FadeIn';
 import { AnimatedText } from '../ui/AnimatedText';
 import { ContactButton } from '../ui/ContactButton';

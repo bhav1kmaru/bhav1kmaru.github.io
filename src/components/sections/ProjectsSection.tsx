@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { LiveProjectButton } from '../ui/LiveProjectButton';
 
@@ -86,7 +86,7 @@ export function ProjectsSection() {
   );
 }
 
-function ProjectCard({ project, index, totalCards, containerRef }: { project: any; index: number; totalCards: number; containerRef: React.RefObject<HTMLDivElement> }) {
+function ProjectCard({ project, index, totalCards, containerRef }: { project: any; index: number; totalCards: number; containerRef: React.RefObject<HTMLDivElement | null> }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,

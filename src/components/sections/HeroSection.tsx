@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import { useRef, useCallback } from 'react';
 import { FadeIn } from '../ui/FadeIn';
 import { Magnet } from '../ui/Magnet';
 import { ContactButton } from '../ui/ContactButton';

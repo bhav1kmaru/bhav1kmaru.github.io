@@ -1,4 +1,4 @@
-import React, { ElementType, useContext } from 'react';
+import { useContext, type ElementType } from 'react';
 import { motion } from 'framer-motion';
 import type { HTMLMotionProps } from 'framer-motion';
 import { LoaderContext } from '../../context/LoaderContext';
@@ -10,6 +10,7 @@ interface FadeInProps extends HTMLMotionProps<"div"> {
   x?: number;
   y?: number;
   as?: ElementType;
+  href?: string;
 }
 
 const motionCache = new Map<ElementType, any>();
