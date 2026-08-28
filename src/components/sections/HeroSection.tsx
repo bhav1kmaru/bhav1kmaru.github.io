@@ -21,7 +21,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
   }, []);
 
   return (
-    <section className="h-screen flex flex-col overflow-x-clip relative">
+    <section className="h-[100dvh] flex flex-col overflow-x-clip relative">
       <nav className="flex justify-between px-6 md:px-10 pt-6 md:pt-8 w-full z-20">
         {['About', 'Projects'].map((item) => (
           <FadeIn key={item} delay={0} y={-20} as="a" href={`#${item.toLowerCase()}`} className="text-textLight font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] hover:opacity-70 transition-opacity duration-200">
@@ -47,7 +47,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
           </FadeIn>
         </div>
 
-        <div className="flex-1 flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-10 w-full z-20 relative">
+        <div className="flex-1 flex justify-between items-end pb-24 sm:pb-8 md:pb-10 px-6 md:px-10 w-full z-20 relative">
           <FadeIn delay={0.35} y={20} className="w-1/2">
             <p className="text-textLight font-light uppercase tracking-wide leading-snug text-[clamp(0.75rem,1.4vw,1.5rem)] max-w-[160px] sm:max-w-[220px] md:max-w-[260px]">
               Full Stack Developer, Designer, Tech Advisor.

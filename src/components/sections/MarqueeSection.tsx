@@ -38,7 +38,7 @@ const renderMedia = (src: string, index: number, prefix: string) => {
         loop
         muted
         playsInline
-        className="w-[420px] h-[270px] rounded-2xl object-cover shrink-0 pointer-events-none"
+        className="w-[280px] h-[180px] md:w-[420px] md:h-[270px] rounded-2xl object-cover shrink-0 pointer-events-none"
       />
     );
   }
@@ -49,7 +49,7 @@ const renderMedia = (src: string, index: number, prefix: string) => {
       src={src} 
       alt="Marquee item" 
       loading="lazy"
-      className="w-[420px] h-[270px] rounded-2xl object-cover shrink-0 pointer-events-none"
+      className="w-[280px] h-[180px] md:w-[420px] md:h-[270px] rounded-2xl object-cover shrink-0 pointer-events-none"
     />
   );
 };
@@ -58,60 +58,28 @@ function useSwipeable(rowRef: React.RefObject<HTMLDivElement | null>) {
   const dragOffset = useRef(0);
   const isDragging = useRef(false);
   const startX = useRef(0);
-  const startY = useRef(0);
   const lastDragOffset = useRef(0);
-  const directionLocked = useRef<'horizontal' | 'vertical' | null>(null);
-
-  // Apply transform directly to the DOM element (avoids React state re-render lag)
-  const applyOffset = (baseTransform: string) => {
-    if (rowRef.current) {
-      rowRef.current.style.transform = baseTransform;
-    }
-  };
 
   const onTouchStart = (e: React.TouchEvent) => {
     isDragging.current = true;
     startX.current = e.touches[0].clientX;
-    startY.current = e.touches[0].clientY;
     lastDragOffset.current = dragOffset.current;
-    directionLocked.current = null; // reset direction lock
   };
 
   const onTouchMove = (e: React.TouchEvent) => {
     if (!isDragging.current) return;
-
     const dx = e.touches[0].clientX - startX.current;
-    const dy = e.touches[0].clientY - startY.current;
-
-    // Lock direction after a small movement threshold
-    if (directionLocked.current === null && (Math.abs(dx) > 5 || Math.abs(dy) > 5)) {
-      directionLocked.current = Math.abs(dx) > Math.abs(dy) ? 'horizontal' : 'vertical';
-    }
-
-    // If vertical, let browser handle native scroll
-    if (directionLocked.current === 'vertical') {
-      isDragging.current = false;
-      return;
-    }
-
-    // Horizontal swipe — prevent page scroll and update drag
-    if (directionLocked.current === 'horizontal') {
-      e.preventDefault();
-      dragOffset.current = lastDragOffset.current + dx;
-    }
+    dragOffset.current = lastDragOffset.current + dx;
   };
 
   const onTouchEnd = () => {
     isDragging.current = false;
-    directionLocked.current = null;
   };
 
-  // Mouse handlers
   const onMouseDown = (e: React.MouseEvent) => {
     isDragging.current = true;
     startX.current = e.clientX;
     lastDragOffset.current = dragOffset.current;
-    e.preventDefault();
   };
 
   useEffect(() => {
@@ -133,7 +101,7 @@ function useSwipeable(rowRef: React.RefObject<HTMLDivElement | null>) {
     };
   }, []);
 
-  return { dragOffset, isDragging, applyOffset, onTouchStart, onTouchMove, onTouchEnd, onMouseDown };
+  return { dragOffset, isDragging, onTouchStart, onTouchMove, onTouchEnd, onMouseDown };
 }
 
 export function MarqueeSection() {
@@ -148,15 +116,15 @@ export function MarqueeSection() {
     let rafId: number;
 
     const tick = () => {
-      if (section) {
+      if (section && window.innerWidth >= 768) { // Only calculate on desktop
         const sectionTop = section.offsetTop;
         scrollOffset.current = (window.scrollY - sectionTop + window.innerHeight) * 0.3;
       }
 
-      if (row1Ref.current) {
+      if (row1Ref.current && window.innerWidth >= 768) {
         row1Ref.current.style.transform = `translateX(${scrollOffset.current - 200 + row1Swipe.dragOffset.current}px)`;
       }
-      if (row2Ref.current) {
+      if (row2Ref.current && window.innerWidth >= 768) {
         row2Ref.current.style.transform = `translateX(${-(scrollOffset.current - 200) + row2Swipe.dragOffset.current}px)`;
       }
 
@@ -169,35 +137,44 @@ export function MarqueeSection() {
 
   return (
     <section id="marquee-section" className="pt-24 sm:pt-32 md:pt-40 pb-10 overflow-hidden flex flex-col gap-3">
-      <div 
-        ref={row1Ref}
-        className="flex gap-3 whitespace-nowrap select-none"
-        style={{ 
-          willChange: 'transform',
-          cursor: 'grab',
-          touchAction: 'pan-y',
-        }}
-        onTouchStart={row1Swipe.onTouchStart}
-        onTouchMove={row1Swipe.onTouchMove}
-        onTouchEnd={row1Swipe.onTouchEnd}
-        onMouseDown={row1Swipe.onMouseDown}
-      >
-        {row1.map((src, i) => renderMedia(src, i, 'row1'))}
+      {/* DESKTOP MARQUEE (Scroll Parallax + Mouse Drag) */}
+      <div className="hidden md:flex flex-col gap-3">
+        <div 
+          ref={row1Ref}
+          className="flex gap-3 whitespace-nowrap select-none"
+          style={{ willChange: 'transform', cursor: 'grab' }}
+          onMouseDown={row1Swipe.onMouseDown}
+          onDragStart={(e) => e.preventDefault()}
+        >
+          {row1.map((src, i) => renderMedia(src, i, 'desktop-row1'))}
+        </div>
+        <div 
+          ref={row2Ref}
+          className="flex gap-3 whitespace-nowrap select-none"
+          style={{ willChange: 'transform', cursor: 'grab' }}
+          onMouseDown={row2Swipe.onMouseDown}
+          onDragStart={(e) => e.preventDefault()}
+        >
+          {row2.map((src, i) => renderMedia(src, i, 'desktop-row2'))}
+        </div>
       </div>
-      <div 
-        ref={row2Ref}
-        className="flex gap-3 whitespace-nowrap select-none"
-        style={{ 
-          willChange: 'transform',
-          cursor: 'grab',
-          touchAction: 'pan-y',
-        }}
-        onTouchStart={row2Swipe.onTouchStart}
-        onTouchMove={row2Swipe.onTouchMove}
-        onTouchEnd={row2Swipe.onTouchEnd}
-        onMouseDown={row2Swipe.onMouseDown}
-      >
-        {row2.map((src, i) => renderMedia(src, i, 'row2'))}
+
+      {/* MOBILE MARQUEE (Native Swipe Carousel, No Scroll Parallax) */}
+      <div className="flex md:hidden flex-col gap-3">
+        <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pl-5 pr-5">
+          {row1.map((src, i) => (
+            <div key={`mobile-row1-${i}`} className="snap-center shrink-0">
+              {renderMedia(src, i, 'mobile-row1')}
+            </div>
+          ))}
+        </div>
+        <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pl-5 pr-5">
+          {row2.map((src, i) => (
+            <div key={`mobile-row2-${i}`} className="snap-center shrink-0">
+              {renderMedia(src, i, 'mobile-row2')}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
