@@ -54,7 +54,7 @@ const renderMedia = (src: string, index: number, prefix: string) => {
   );
 };
 
-function useSwipeable(rowRef: React.RefObject<HTMLDivElement | null>) {
+function useSwipeable() {
   const dragOffset = useRef(0);
   const isDragging = useRef(false);
   const startX = useRef(0);
@@ -108,8 +108,8 @@ export function MarqueeSection() {
   const row1Ref = useRef<HTMLDivElement>(null);
   const row2Ref = useRef<HTMLDivElement>(null);
   const scrollOffset = useRef(0);
-  const row1Swipe = useSwipeable(row1Ref);
-  const row2Swipe = useSwipeable(row2Ref);
+  const row1Swipe = useSwipeable();
+  const row2Swipe = useSwipeable();
 
   useEffect(() => {
     const section = document.getElementById('marquee-section');
