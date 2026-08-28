@@ -33,7 +33,7 @@ export function EarthLoader() {
           />
         </svg>
       </div>
-      <p>Waiting for Bhavik...</p>
+      <p>Hold up...</p>
     </div>
   );
 }
